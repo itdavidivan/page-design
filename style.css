@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: Epilogue;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+.container {
+  max-width: 140rem;
+  margin: 0 auto;
+}
+nav {
+  display: flex;
+  padding: 24px 42px;
+  justify-content: space-between;
+}
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+nav > ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+.header {
+  display: flex;
+  padding: 42px 24px;
+  gap: 68px;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  font-size: 68px;
+}
+.left {
+  width: 620px;
+  height: 328px;
+  display: grid;
+  margin: 58px;
+}
+.button {
+  width: 211px;
+  height: 78px;
+  padding: 24px 64px;
+  background-color: #2d2d2d;
+  color: white;
+  margin-top: 48px;
+  cursor: pointer;
+  transition: transform 1.2s ease;
+}
+.button:hover {
+  transform: scale(1.1);
+}
+span {
+  font-size: 20px;
+}
+.left > p {
+  line-height: 27px;
+  font-size: 17px;
+  max-width: 620px;
+}
+.right {
+  margin: 56px;
+  position: relative;
+}
+
+.skuska {
+  position: absolute;
+  top: 30px;
+  right: 150px;
+}
+.brands {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 42px 68px;
+}
+.products {
+  display: flex;
+  padding: 64px 24px;
+  gap: 24px;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.product {
+  width: 310px;
+  display: grid;
+  gap: 12px;
+}
+h2 {
+  font-size: 27px;
+  text-align: center;
+  margin: auto;
+}
+.product > p {
+  text-align: center;
+}
+.products > div > img {
+  width: 124px;
+  height: 124px;
+  margin: auto;
+  margin-bottom: 42px;
+  transition: transform 1.2s ease;
+}
+.products > div > img:hover {
+  transform: scale(1.3);
+}
+.logo {
+  background-color: yellow;
+  border-top: 3px solid black; /* Pridajte farbu pre border */
+  border-bottom: 3px solid black; /* Pridajte farbu pre border */
+  gap: 3px; /* Ak používate flexbox, gap určuje vzdialenosť medzi položkami, ale nie medzi logom a borderom */
+  padding-top: 5px; /* Pridajte padding na vrchu, aby ste oddialili border od loga */
+  padding: 5px;
+  box-shadow: 2px 2px 2px 1px;
+}
+
+.work {
+  padding: 24px;
+  margin: 0 auto;
+}
+.boxes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
+
+  gap: 100px;
+  margin: 0 auto;
+}
+.latest-work {
+  text-align: center;
+  margin-bottom: 42px;
+  margin-top: 24px;
+  font-weight: 600;
+}
+.box-item {
+  display: grid;
+  gap: 8px;
+}
+.reviews {
+  padding-top: 42px;
+}
+.testimonial-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 24px;
+}
+.testimonial-item {
+  background: #f3f3f3;
+  padding: 4.2rem;
+  display: grid;
+  gap: 6.8rem;
+}
+.testimonial-text {
+  font-weight: 600;
+  font-size: 20px;
+  text-align: justify;
+}
+.info {
+  display: flex;
+  align-items: start;
+  gap: 38px;
+}
+.stars {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 1.1rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+.footer-h2 {
+  margin: 24px 0;
+  font-size: 30px;
+  color: #2d2d2d;
+  text-align: start;
+}
+.footer-info {
+  max-width: 550px;
+  margin-left: 24px;
+}
+.icons {
+  display: flex;
+  gap: 45px;
+}
+.footer-text {
+  margin-bottom: 42px;
+  max-width: 550px;
+}
+.footer-form {
+  display: grid;
+  gap: 12px;
+  margin-right: 24px;
+}
+input {
+  width: 520px;
+  background-color: #f3f3f3;
+  padding: 16px 24px;
+  border: none;
+}
+.footer-button {
+  background-color: #2d2d2d;
+  color: white;
+  padding: 24px 64px;
+  width: fit-content;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+input:focus {
+  outline: none;
+}
+.autor {
+  font-family: "Edu AU VIC WA NT Pre", cursive;
+  position: absolute;
+  right: 0;
+  margin: 10px;
+}
+
+@media (max-width: 500px) {
+  .testimonial-boxes {
+    display: grid; /* Zobrazí každý element na novom riadku */
+    grid-template-columns: auto;
+    gap: 50px;
+  }
+  .testimonial-item {
+    display: grid;
+
+    margin-left: 0;
+    text-align: center;
+    gap: 30px;
+  }
+  .brands {
+    display: grid;
+    margin-top: 50px;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+  }
+  .button {
+    justify-self: center;
+  }
+  .right {
+    display: none;
+  }
+  .header {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .work {
+    display: grid;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .boxes {
+    gap: 50px !important;
+  }
+  footer {
+    margin: 0;
+    padding: 0px;
+  }
+  .footer {
+    display: grid;
+    gap: 50px;
+  }
+
+  .footer-h2 {
+    text-align: center;
+  }
+  .footer-info {
+    margin: 24px;
+    display: grid;
+    gap: 30px;
+  }
+  .footer-form {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin: 0;
+  }
+  .footer-text {
+    text-align: center;
+    margin: 0;
+  }
+  input {
+    max-width: 450px;
+    justify-self: center;
+  }
+  .footer-button {
+    justify-content: center;
+    justify-self: center;
+  }
+  .icons {
+    justify-content: center;
+  }
+  .autor {
+    margin: 20px;
+    position: relative;
+    text-align: center;
+  }
+}
