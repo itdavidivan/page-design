@@ -78,12 +78,29 @@ nav {
   display: flex;
   padding: 24px 42px;
   justify-content: space-between;
+  position: relative;
 }
-a {
+nav a {
+  position: relative;
+  display: inline-block;
   text-decoration: none;
   font-weight: bold;
   color: black;
+  transition: all 0.8s ease;
+  padding: 10px;
+  border-radius: 10px;
+
+  position: relative;
 }
+nav ul li a:hover {
+  transform: scale(1.1);
+  border-radius: 10px;
+  background-color: #fcfcfc31;
+  color: #050801;
+  box-shadow: 0 0 5px #ababab, 0 0 25px #ababab, 0 0 50px #ababab,
+    0 0 200px #ababab;
+}
+
 nav > ul {
   list-style: none;
   display: flex;
@@ -106,6 +123,7 @@ h1 {
   margin: 58px;
 }
 .button {
+  position: relative;
   width: 211px;
   height: 78px;
   padding: 24px 64px;
@@ -113,10 +131,21 @@ h1 {
   color: white;
   margin-top: 48px;
   cursor: pointer;
-  transition: transform 1.2s ease;
 }
-.button:hover {
-  transform: scale(1.1);
+.button::after,
+.button::before {
+  content: "";
+  inset: -3px;
+  background: conic-gradient(from var(--angle), red, blue, green, red);
+  position: absolute;
+  z-index: -1;
+}
+.button::after {
+  filter: blur(15px);
+}
+.button:hover::after,
+.button:hover::before {
+  animation: glowing 2s linear infinite;
 }
 span {
   font-size: 20px;
@@ -377,5 +406,18 @@ input:focus {
     margin: 20px;
     position: relative;
     text-align: center;
+  }
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 53deg;
+  inherits: false;
+}
+@keyframes glowing {
+  from {
+    --angle: 53deg;
+  }
+  to {
+    --angle: 413deg;
   }
 }
