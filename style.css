@@ -93,12 +93,10 @@ nav a {
   position: relative;
 }
 nav ul li a:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
   border-radius: 10px;
   background-color: #fcfcfc31;
   color: #050801;
-  box-shadow: 0 0 5px #ababab, 0 0 25px #ababab, 0 0 50px #ababab,
-    0 0 200px #ababab;
 }
 
 nav > ul {
@@ -110,7 +108,7 @@ nav > ul {
   display: flex;
   padding: 42px 24px;
   gap: 68px;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 h1 {
@@ -135,8 +133,8 @@ h1 {
 .button::after,
 .button::before {
   content: "";
-  inset: -3px;
-  background: conic-gradient(from var(--angle), red, blue, green, red);
+  inset: -5px;
+  background: conic-gradient(from var(--angle), rgb(255, 0, 0), black, red);
   position: absolute;
   z-index: -1;
 }
@@ -160,11 +158,6 @@ span {
   position: relative;
 }
 
-.skuska {
-  position: absolute;
-  top: 30px;
-  right: 150px;
-}
 .brands {
   display: flex;
   justify-content: space-between;
@@ -210,8 +203,11 @@ h2 {
   padding-top: 5px; /* Pridajte padding na vrchu, aby ste oddialili border od loga */
   padding: 5px;
   box-shadow: 2px 2px 2px 1px;
+  transition: 0.8s ease;
 }
-
+.logo:hover {
+  transform: scale(1.2);
+}
 .work {
   padding: 24px;
   margin: 0 auto;
@@ -306,6 +302,8 @@ input {
   background-color: #2d2d2d;
   color: white;
   padding: 24px 64px;
+  margin-left: 6px;
+  margin-bottom: 6px;
   width: fit-content;
   cursor: pointer;
   border: none;
